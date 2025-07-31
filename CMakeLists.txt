@@ -10,7 +10,7 @@ include(FetchContent)
 set(TOKENIZERS_CPP_MSVC_RUNTIME_LIBRARY "" CACHE STRING "MSVC runtime library setting (One of MT or MD)")
 
 # update to contain more rust flags
-set(TOKENIZERS_CPP_RUST_FLAGS "")
+option(TOKENIZERS_CPP_RUST_FLAGS "RUSTFLAGS used to build tokenizer-c" "")
 set(TOKENIZERS_CPP_CARGO_TARGET "")
 
 if(MSVC)
@@ -89,7 +89,7 @@ if(WIN32)
   )
 endif()
 
-set(TOKENIZERS_CPP_CARGO_FLAGS "")
+option(TOKENIZERS_CPP_CARGO_FLAGS "Cargo build flags used to build tokenizer-c" "")
 set(TOKENIZERS_CPP_CARGO_TARGET_DIR ${CMAKE_CURRENT_BINARY_DIR})
 set(TOKENIZERS_CPP_CARGO_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR})
 
