@@ -12,7 +12,7 @@ set(TOKENIZERS_CPP_MSVC_RUNTIME_LIBRARY "" CACHE STRING "MSVC runtime library se
 # update to contain more rust flags
 option(TOKENIZERS_CPP_RUST_FLAGS "RUSTFLAGS used to build tokenizer-c" "")
 set(TOKENIZERS_CPP_CARGO_TARGET "")
-option(TOKENIZERS_CPP_RUST_NIGHTLY "Use nightly toolchain for Rust target", OFF)
+option(TOKENIZERS_CPP_RUST_NIGHTLY "Use nightly toolchain for Rust target" OFF)
 
 if(MSVC)
   if(TOKENIZERS_CPP_MSVC_RUNTIME_LIBRARY STREQUAL "MT")
